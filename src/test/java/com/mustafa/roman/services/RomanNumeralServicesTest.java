@@ -37,6 +37,10 @@ public class RomanNumeralServicesTest {
 		assertNull(rns.numberToRoman("rt3"));
 	}
 	
+	@Test
+	public void test_romanToNumber_returns_null_if_incoorect() {
+		assertNull(rns.numberToRoman("CXXIIII"));
+	}
 	public void test_romanToNumber_translates_correctly() {
 		assertEquals("123", rns.romanToNumber("CXXIII"));
 		assertEquals("89", rns.romanToNumber("LXXXIX"));

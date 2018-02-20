@@ -2,7 +2,6 @@ package com.mustafa.roman.controller;
 
 import javax.servlet.http.HttpServletResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,8 +12,12 @@ import com.mustafa.roman.services.RomanNumeralService;
 @RestController
 public class RomanNumeralController {
 
-	@Autowired
+	
 	private RomanNumeralService romanService;
+	
+	public RomanNumeralController(RomanNumeralService romanService) {
+		this.romanService = romanService;
+	}
 	
 	@RequestMapping("/ping")
 	public String ping() {

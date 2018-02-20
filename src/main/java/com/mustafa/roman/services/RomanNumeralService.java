@@ -66,7 +66,6 @@ public class RomanNumeralService {
 		final Matcher matcher = pattern.matcher(roman);
 		int index = 0;
 		while (matcher.find()) {
-			System.out.println("Full match: " + matcher.group(0));
 			if(matcher.group(1).equals(romanList.get(index).getRoman())){
 				num += romanList.get(index).getNumber();
 			} else {
