@@ -1,0 +1,25 @@
+<div ng-show="vm.numberToRoman">
+	<h4>Translating from Number to Roman</h4>
+	<p>
+		Enter a whole positive number to get it's Roman numeral equivalent
+	</p>
+	<form>
+		Number: <input type="text" ng-model="vm.number">
+		<input type="submit" ng-click="vm.submitNumber(vm.number)">
+		<p>Result :<input type="text" ng-model="vm.romanResult" readonly></p>
+	</form>
+	<button type="button" ng-click="vm.switch()">Switch</button>
+</div>
+<div ng-hide="vm.numberToRoman">
+	<h4>Translating from Roman to Number</h4>
+	<p>
+		Enter a Roman numeral and get it's translation to Hindu-Arabic numeral
+		equivalent
+	</p>
+	<form>
+		Roman: <input type="text" ng-model="vm.roman">
+		<input type="submit" ng-click="vm.submitRoman(vm.roman)">
+		<p>Result :<input type="text" ng-model="vm.numberResult" readonly></p>
+	</form>
+	<button type="button" ng-click="vm.switch()">Switch</button>
+</div>

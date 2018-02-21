@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="appModule">
+<head>
+<meta charset="UTF-8">
+<title>CSFWG</title>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+<!--Angular dependency  -->
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular-route.min.js"></script>
+<!--App Module-->
+<script src="app/appModule/app.module.js"></script>
+<!--App Directives  -->
+<!--App services  -->
+<script src="app/appModule/home.service.js"></script>
+<!--App components  -->
+<script src="app/appModule/home/home.component.js"></script>
+
+</head>
+<body style="background:#B29DD3">
+	<h1 style="text-align: center;">Roman Numeral Translator</h1>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<ng-view class="col-md-8 jumbotron"></ng-view>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+</body>
+</html>
